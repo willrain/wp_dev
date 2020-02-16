@@ -1,0 +1,48 @@
+[mysql 툴]
+	https://www.heidisql.com/download.php
+
+[ phpstrom ]
+	계정 : willrain@emart.com
+
+
+[ 윈도우10 도커 설치 및 설정 ]
+* Windows 용 Docker Desktop을 실행하려면 Microsoft Hyper-V가 필요
+	=> 업관리자 "성능" 탭에서 "가상화:사용"
+* 윈도우 10 에서 'Windows 기능 켜기/끄기' 를 실행한 다음, Hyper-V 옵션을 활성화
+
+* 도커 다운로드 
+	https://docs.docker.com/docker-for-windows/install/#download-docker-for-windows
+	github : willrain / this
+
+
+[ docker 실행 ]
+
+# volume 생성
+docker volume create html:/c/willrain/wordpress/data01/html
+
+
+	https://hub.docker.com/_/wordpress/
+
+$ docker ps 
+
+$ cd willrain/wordpress
+
+
+
+
+-- mysql 
+$ docker run --name local-mysql -e MYSQL_ROOT_PASSWORD=root!@# -d mysql:5.7
+$ docker run -it --network some-network --rm mysql mysql -hsome-mysql -uexample-user -p
+
+
+[ docker-compose ]
+$ docker-compose up -d 
+$ docker-compose -f stack.yml up
+
+
+
+
+Window Container 사용시 주의 점 
+도커 셋팅 > Docker Engine 
+	"experimental": true
+> Restart Docker
